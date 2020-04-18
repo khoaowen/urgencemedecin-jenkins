@@ -21,8 +21,6 @@ import org.apache.commons.io.IOUtils;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
-import javafx.util.Pair;
-
 public class App {
 
 	public static void main(String[] args) {
@@ -80,7 +78,7 @@ public class App {
 		StringBuilder bd = new StringBuilder();
 		for (String var : variablesToRead) {
 			List<String> valuesOfHeader = reader.getValuesOfHeader("Ville ALL", var);
-			Pair<String, Long> generateStatements = MetaDatasUpdater.insertStatements(metaId, var, postIds,
+			CustomPair<String, Long> generateStatements = MetaDatasUpdater.insertStatements(metaId, var, postIds,
 					valuesOfHeader);
 			bd.append(generateStatements.getKey());
 			metaId = generateStatements.getValue();

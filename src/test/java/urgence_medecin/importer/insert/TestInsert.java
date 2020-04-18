@@ -12,8 +12,8 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import javafx.util.Pair;
 import urgence_medecin.importer.AppTestSuite;
+import urgence_medecin.importer.CustomPair;
 import urgence_medecin.importer.ExcelReader;
 import urgence_medecin.importer.MetaDatasUpdater;
 
@@ -100,7 +100,7 @@ public class TestInsert {
 		StringBuilder bd = new StringBuilder();
 		for (String var : variablesToRead) {
 			List<String> valuesOfHeader = reader.getValuesOfHeader("Département Suite", var);
-			Pair<String, Long> generateStatements = MetaDatasUpdater.insertStatements(metaId, var, postIds,
+			CustomPair<String, Long> generateStatements = MetaDatasUpdater.insertStatements(metaId, var, postIds,
 					valuesOfHeader);
 			bd.append(generateStatements.getKey());
 			metaId = generateStatements.getValue();

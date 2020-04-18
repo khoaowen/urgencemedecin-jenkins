@@ -2,8 +2,6 @@ package urgence_medecin.importer;
 
 import java.util.List;
 
-import javafx.util.Pair;
-
 /**
  * This class generates the SQL statements for updating a list of Post Ids
  * (referenced to POST object in Wordpress) of the table {@code wpp9_postmeta}.
@@ -51,7 +49,7 @@ public class MetaDatasUpdater {
 	 * @param metaValues  The list of all possible values for the variable metakey
 	 * @return
 	 */
-	public static Pair<String, Long> insertStatements(Long firstMetaId, String metaKey, List<Long> postIds,
+	public static CustomPair<String, Long> insertStatements(Long firstMetaId, String metaKey, List<Long> postIds,
 			List<String> metaValues) {
 		StringBuilder bd = new StringBuilder();
 		int innerLoopSize = postIds.size() / metaValues.size();
@@ -61,7 +59,7 @@ public class MetaDatasUpdater {
 					postIds.get(i), metaKey, metaValues.get(i / innerLoopSize % metaValues.size())));
 			incrementMetaId++;
 		}
-		return new Pair<String, Long>(bd.toString(), incrementMetaId);
+		return new CustomPair<String, Long>(bd.toString(), incrementMetaId);
 	}
 
 	public static String updateStatements(String variable, List<Long> postIds, List<String> valuesOfHeader) {
