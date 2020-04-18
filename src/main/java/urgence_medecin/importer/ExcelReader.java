@@ -1,7 +1,6 @@
 package urgence_medecin.importer;
 
 import java.io.Closeable;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,7 @@ public class ExcelReader implements Closeable {
 
 	public ExcelReader(String filePath) throws EncryptedDocumentException, InvalidFormatException, IOException {
 		this.filePath = filePath;
-		workbook = WorkbookFactory.create(new File(getClass().getClassLoader().getResource(filePath).getFile()));
+		workbook = WorkbookFactory.create(getClass().getResourceAsStream("/" + filePath));
 	}
 
 	/**
