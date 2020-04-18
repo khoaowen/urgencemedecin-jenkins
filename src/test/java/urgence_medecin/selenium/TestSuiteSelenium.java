@@ -14,7 +14,6 @@ import urgence_medecin.selenium.test.UM_10;
 import urgence_medecin.selenium.test.UM_11;
 import urgence_medecin.selenium.test.UM_2;
 import urgence_medecin.selenium.test.UM_21;
-import urgence_medecin.selenium.test.UM_26;
 import urgence_medecin.selenium.test.UM_27;
 import urgence_medecin.selenium.test.UM_28;
 import urgence_medecin.selenium.test.UM_29;
@@ -22,7 +21,6 @@ import urgence_medecin.selenium.test.UM_3;
 import urgence_medecin.selenium.test.UM_30;
 import urgence_medecin.selenium.test.UM_31;
 import urgence_medecin.selenium.test.UM_32;
-import urgence_medecin.selenium.test.UM_33;
 import urgence_medecin.selenium.test.UM_4;
 import urgence_medecin.selenium.test.UM_5;
 import urgence_medecin.selenium.test.UM_9;
@@ -44,9 +42,9 @@ import urgence_medecin.selenium.test.UM_9;
 	UM_29.class, 
 	UM_30.class, 
 	UM_31.class, 
-	UM_32.class, 
+	UM_32.class/*, 
 	UM_26.class,
-	UM_33.class
+	UM_33.class*/
 	})
 //@formatter:on
 public class TestSuiteSelenium {
