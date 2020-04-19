@@ -1,2 +1,2 @@
 # urgencemedecin
-Sample exercice for Jenkins course
+Sample exercice for Jenkins course, using Webhoook
