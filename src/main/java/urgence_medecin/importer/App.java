@@ -69,7 +69,6 @@ public class App {
 	}
 
 	private static void generateInsertStatements(final ExcelReader reader) throws IOException, URISyntaxException {
-//		final List<Long> postIds = LongStream.rangeClosed(6550, 43291).boxed().collect(Collectors.toList());
 		final List<Long> postIds = parsePostIds("list_of_villes.txt");
 		final long firstMetaId = 2359535;
 		List<String> variablesToRead = IntStream.rangeClosed(1, 46).mapToObj(i -> "variable" + i)
